@@ -1,20 +1,21 @@
-import React from 'react';
 import {
   Header,
   HeaderContainer,
-  HeaderName,
-  HeaderNavigation,
+  HeaderGlobalAction,
+  HeaderGlobalBar,
   HeaderMenuButton,
   HeaderMenuItem,
-  HeaderGlobalBar,
-  HeaderGlobalAction,
-  SkipToContent,
+  HeaderName,
+  HeaderNavigation,
+  HeaderSideNavItems,
   SideNav,
   SideNavItems,
-  HeaderSideNavItems,
+  SkipToContent,
 } from '@carbon/react';
-import { Switcher, Notification, UserAvatar } from '@carbon/react/icons';
+import { Notification, Switcher, UserAvatar } from '@carbon/react/icons';
+
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 const TutorialHeader = () => (
   <HeaderContainer
@@ -27,7 +28,7 @@ const TutorialHeader = () => (
           isActive={isSideNavExpanded}
         />
         <HeaderName element={Link} to="/" prefix="IBM">
-          Carbon Tutorial
+          Carbon React
         </HeaderName>
         <HeaderNavigation aria-label="Carbon Tutorial">
           <HeaderMenuItem element={Link} to="/repos">
