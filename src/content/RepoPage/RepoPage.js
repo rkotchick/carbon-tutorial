@@ -1,22 +1,22 @@
+import {
+  Column,
+  DataTableSkeleton,
+  Grid,
+  Link,
+  Pagination,
+} from '@carbon/react';
 import React, { useState } from 'react';
-import RepoTable from './RepoTable';
 import { gql, useQuery } from '@apollo/client';
 
-import {
-  Link,
-  DataTableSkeleton,
-  Pagination,
-  Grid,
-  Column,
-} from '@carbon/react';
+import RepoTable from './RepoTable';
 
 const REPO_QUERY = gql`
-  query REPO_QUERY {
+  query {
     # Let's use carbon as our organization
     organization(login: "carbon-design-system") {
       # We'll grab all the repositories in one go. To load more resources
       # continuously, see the advanced topics.
-      repositories(first: 75, orderBy: { field: UPDATED_AT, direction: DESC }) {
+      repositories(first: 12, orderBy: { field: UPDATED_AT, direction: DESC }) {
         totalCount
         nodes {
           url
