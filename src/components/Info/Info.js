@@ -8,7 +8,6 @@ function createArrayFromPhrase(phrase) {
   const thirdWord = splitPhrase.pop();
   return [splitPhrase.join(' '), thirdWord];
 }
-
 const InfoSection = props => (
   <Grid className={`${props.className} info-section`}>
     <Column md={8} lg={4} xlg={3}>
